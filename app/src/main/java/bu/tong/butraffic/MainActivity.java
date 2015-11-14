@@ -1,6 +1,8 @@
 package bu.tong.butraffic;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.provider.LiveFolders;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
                 MediaPlayer buttonPlayer = MediaPlayer.create(getBaseContext(), R.raw.cat);
                 buttonPlayer.start();
                 //Intent to WebView
-
-
+                Intent objIntent = new Intent(Intent.ACTION_VIEW);
+                objIntent.setData(Uri.parse("https://www.facebook.com/charmist"));
+                startActivity(objIntent);
             }   //event
         });
 
